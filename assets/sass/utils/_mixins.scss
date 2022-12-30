@@ -1,0 +1,34 @@
+
+
+// For responsive design
+// $device : string must be mobile, tablet, laptop or desktop
+// Refeers to $breakpoints map in variable file to see their corresponding sizes 
+@mixin breakpoint($device){
+    @media screen and (max-width:map-get($breakpoints, $device)){
+        @content;
+    }
+}
+
+
+// Flex Center alignment
+@mixin flex_center($direction : row){
+    display:flex;
+    flex-direction:$direction;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// Flex Start alignment
+@mixin flex_start($direction : row){
+    display:flex;
+    flex-direction:$direction;
+    justify-content: start;
+    
+    @if ($direction == row){
+        align-items: center;
+    }
+    @else{
+        align-items: start; 
+    }
+}

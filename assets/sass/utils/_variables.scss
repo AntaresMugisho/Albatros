@@ -1,0 +1,29 @@
+
+
+// Colors
+$primary_color:#0b5672;
+$secondary_color:#4ab7e0;
+$dark_color:#313131;
+
+
+$main_margin : 10%;
+
+// LISTS & MAPS
+
+//Font size
+$font_size:(
+    level_1: 8rem,
+    level_2: 5.56rem,
+    level_3: 3.4rem,
+    level_4: 2.4rem,
+    level_5: 2rem,  
+    normal: 1.6rem,
+);
+
+// Breakpoint - used for responsive design
+$breakpoints: (
+    mobile: 480px,
+    tablet: 768px,
+    laptop: 978px,
+    desktop: 1024px
+);
