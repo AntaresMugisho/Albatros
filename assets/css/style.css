@@ -117,16 +117,6 @@ p, a {
   transition: color 0.2s, background-color 0.2s;
   position: relative;
 }
-.navbar .nav-menu .nav-link::before {
-  content: "";
-  width: 1px;
-  height: 20px;
-  background-color: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-}
 .navbar .nav-menu .nav-link::after {
   content: "";
   width: 0;
@@ -150,40 +140,26 @@ p, a {
 .navbar .nav-menu .nav-link.active::after {
   width: 100%;
 }
-.navbar .mobile-icons {
-  font-weight: 700;
-  font-size: 2.4rem;
-  display: none;
-}
-@media screen and (max-width: 480px) {
-  .navbar .mobile-icons {
-    position: relative;
-    display: flex;
-    gap: 32px;
-  }
-  .navbar .mobile-icons .cart-counter {
-    left: 20px;
-    top: -2px;
-    font-weight: 400;
-  }
+.navbar .call {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 4px 12px;
+  font-size: 1.4rem;
+  display: flex;
+  gap: 12px;
 }
 
-.nav-link.cart {
+.nav-menu li {
   position: relative;
 }
-
-.cart-counter {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
+.nav-menu li:not(:nth-child(1))::before {
+  content: "";
+  width: 1px;
   height: 20px;
-  border-radius: 50%;
-  background-color: rgb(3, 167, 3);
-  color: #fff;
-  font-size: 1.6rem;
+  background-color: rgba(255, 255, 255, 0.3);
   position: absolute;
-  top: -4px;
-  right: -16px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }

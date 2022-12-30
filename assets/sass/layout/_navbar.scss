@@ -71,17 +71,6 @@
         transition: color .2s,
                     background-color .2s;
         position: relative;
-
-        &::before{
-            content:"";
-            width:1px;
-            height:20px;
-            background-color: #fff;
-            position: absolute;
-            bottom:0;
-            left:0;
-            transform:translate(-50%, -50%)
-        }
         
         &::after{
             content:"";
@@ -111,40 +100,47 @@
             width:100%;
         }
     }
-
-    .mobile-icons{
-        font-weight: 700;
-        font-size: fontSize(level_4);
-        display: none;
-
-        @include breakpoint(mobile){
-            position:relative;
-            display: flex;
-            gap:32px;
-
-            .cart-counter{
-                left:20px;
-                top:-2px;
-                font-weight: 400;
-            }
-        }
+    
+    .call{
+        color:#fff;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius:12px;
+        padding:4px 12px;
+        font-size: 1.4rem;
+        display: flex;
+        gap:12px;
     }
+    // .mobile-icons{
+    //     font-weight: 700;
+    //     font-size: fontSize(level_4);
+    //     display: none;
+
+    //     @include breakpoint(mobile){
+    //         position:relative;
+    //         display: flex;
+    //         gap:32px;
+
+    //         .cart-counter{
+    //             left:20px;
+    //             top:-2px;
+    //             font-weight: 400;
+    //         }
+    //     }
+    // }
 }
 
-.nav-link.cart{
+// Naw links separators
+.nav-menu li{
     position:relative;
-}
 
-.cart-counter{
-    @include flex_center;
-    width:20px;
-    height:20px;
-    border-radius: 50%;
-    background-color: rgb(3, 167, 3);
-    color:#fff;
-    font-size: fontSize(normal);
-
-    position:absolute;
-    top:-4px;
-    right:-16px;
+    &:not(:nth-child(1))::before{
+        content:"";
+        width:1px;
+        height:20px;
+        background-color:rgba(255, 255, 255, 0.3);
+        position: absolute;
+        top:50%;
+        left:0;
+        transform:translateY(-50%);
+    }
 }
