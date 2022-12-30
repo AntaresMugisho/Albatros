@@ -12,8 +12,8 @@
     width:100%;
     z-index: 100;
 
-    @include breakpoint(tablet){
-        padding:2rem 5%;
+    @include breakpoint(laptop){
+        padding: 0 5%;
     }
 
     .nav-brand{
@@ -21,7 +21,9 @@
         font-weight:900;
         font-size:fontSize(level_4);
 
-        @include breakpoint(mobile){
+        @include breakpoint(laptop){
+            margin: 0 auto;
+            font-weight:600;
             font-size: fontSize(level_5);
         }
 
@@ -38,10 +40,6 @@
         font-size: fontSize(normal);
 
         @include breakpoint(tablet){
-            gap:20px;
-        }
-
-        @include breakpoint(mobile){
             @include flex_center(column);
             font-size: fontSize(level_4);
             background-color: rgba(255, 255, 255, 0.95);
@@ -109,24 +107,35 @@
         font-size: 1.4rem;
         display: flex;
         gap:12px;
+        transition: background-color .2s;
+
+        @media screen and (max-width:1130px){
+            display:none;
+        }
+
+        &:hover{
+            background-color: $secondary_color;
+            // color:#313131;
+        }
     }
-    // .mobile-icons{
-    //     font-weight: 700;
-    //     font-size: fontSize(level_4);
-    //     display: none;
 
-    //     @include breakpoint(mobile){
-    //         position:relative;
-    //         display: flex;
-    //         gap:32px;
+    .mobile-icon{
+        font-weight: 400;
+        font-size: fontSize(level_4);
+        display: none;
 
-    //         .cart-counter{
-    //             left:20px;
-    //             top:-2px;
-    //             font-weight: 400;
-    //         }
-    //     }
-    // }
+        @include breakpoint(tablet){
+            position:relative;
+            display: flex;
+            gap:32px;
+
+            .cart-counter{
+                left:20px;
+                top:-2px;
+                font-weight: 400;
+            }
+        }
+    }
 }
 
 // Naw links separators

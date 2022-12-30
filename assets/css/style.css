@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,900&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 *,
 ::before,
 ::after {
@@ -53,9 +51,9 @@ p, a {
   width: 100%;
   z-index: 100;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 978px) {
   .navbar {
-    padding: 2rem 5%;
+    padding: 0 5%;
   }
 }
 .navbar .nav-brand {
@@ -63,8 +61,10 @@ p, a {
   font-weight: 900;
   font-size: 2.4rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 978px) {
   .navbar .nav-brand {
+    margin: 0 auto;
+    font-weight: 600;
     font-size: 2rem;
   }
 }
@@ -82,11 +82,6 @@ p, a {
   font-size: 1.6rem;
 }
 @media screen and (max-width: 768px) {
-  .navbar .nav-menu {
-    gap: 20px;
-  }
-}
-@media screen and (max-width: 480px) {
   .navbar .nav-menu {
     display: flex;
     flex-direction: column;
@@ -148,6 +143,32 @@ p, a {
   font-size: 1.4rem;
   display: flex;
   gap: 12px;
+  transition: background-color 0.2s;
+}
+@media screen and (max-width: 1130px) {
+  .navbar .call {
+    display: none;
+  }
+}
+.navbar .call:hover {
+  background-color: #4ab7e0;
+}
+.navbar .mobile-icon {
+  font-weight: 400;
+  font-size: 2.4rem;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navbar .mobile-icon {
+    position: relative;
+    display: flex;
+    gap: 32px;
+  }
+  .navbar .mobile-icon .cart-counter {
+    left: 20px;
+    top: -2px;
+    font-weight: 400;
+  }
 }
 
 .nav-menu li {
