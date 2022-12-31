@@ -11,7 +11,7 @@
     <header>
         <nav class="navbar">
 
-            <div class="mobile-icon">
+            <div class="mobile-icon" aria-hidden="true">
                 <i aria-label="Menu" class="humburger">#</i>
             </div>
 
@@ -23,14 +23,26 @@
                 <li><a href="#" class="nav-link">Compétences</a></li>
                 <li><a href="#" class="nav-link">Contacts</a></li>
                 <li><a href="#" class="nav-link">Projets</a></li>
+
+                <div class="mobile-icon contacts" aria-hidden="true">
+                    <p class="help-text">Pour toute préoccupation, n'hésitez pas à me contacter vie l'un des moyens ci-après.</p>
+
+                    <div class="contacts-container">
+                        <a href="#" aria-lebel="Phone"><i>#</i></a>
+                        <a href="#" aria-lebel="Messenger"><i>#</i></a>
+                        <a href="#" aria-lebel="WhatsApp"><i>#</i></a>
+                        <a href="#" aria-lebel="E-mail"><i>#</i></a>
+                    </div>
+                </div>
+              
             </ul>
 
             <div>
-                <a href="tel:+243970946414" class="call"><i aria-label="Appeler">#</i>+243 970 94 64 14</a>
+                <a href="tel:+243970946414" class="phone-number" aria-label="Appeler le +243 970946414"><i>#</i>+243 970 94 64 14</a>
             </div>
 
-            <div class="mobile-icon">
-                <i class="phone"># <a aria-label="Appeler le +243 970 94 64 14" href="tel:+243970946414"></a></i>
+            <div class="mobile-icon"  aria-hidden="true" >
+                <i class="phone"># <a aria-label="Appeler le +243 970946414" href="tel:+243970946414"></a></i>
             </div>
         </nav>
     </header>

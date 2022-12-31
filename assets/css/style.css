@@ -92,16 +92,16 @@ p, a {
   .navbar .nav-menu {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.4rem;
+    justify-content: start;
+    align-items: start;
     background-color: #0b5672;
-    width: 100%;
-    height: 100vh;
+    width: 60%;
+    height: 92vh;
+    gap: 0;
     position: absolute;
-    top: 51px;
-    right: 0;
-    transition: transform 2s;
+    top: 46px;
+    left: 0;
+    transition: transform 1s;
   }
   .navbar .nav-menu--show {
     border-radius: 0;
@@ -112,9 +112,15 @@ p, a {
 .navbar .nav-menu .nav-link {
   display: block;
   color: #fff;
-  padding: 20px 20px;
+  padding: 20px;
   transition: color 0.2s, background-color 0.2s;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .navbar .nav-menu .nav-link {
+    padding: 10px;
+    margin: 10px 0;
+  }
 }
 .navbar .nav-menu .nav-link::after {
   content: "";
@@ -127,11 +133,24 @@ p, a {
   left: 0;
   transition: width 0.2s;
 }
+@media screen and (max-width: 768px) {
+  .navbar .nav-menu .nav-link::after {
+    height: 0;
+    width: 4px;
+    border-radius: 0 4px 4px 0;
+  }
+}
 .navbar .nav-menu .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
 .navbar .nav-menu .nav-link:hover::after {
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .navbar .nav-menu .nav-link:hover::after {
+    height: 100%;
+    width: 4px;
+  }
 }
 .navbar .nav-menu .nav-link.active {
   font-weight: 700;
@@ -139,7 +158,13 @@ p, a {
 .navbar .nav-menu .nav-link.active::after {
   width: 100%;
 }
-.navbar .call {
+@media screen and (max-width: 768px) {
+  .navbar .nav-menu .nav-link.active::after {
+    width: 4px;
+    height: 100%;
+  }
+}
+.navbar .phone-number {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 12px;
@@ -150,33 +175,21 @@ p, a {
   transition: background-color 0.2s;
 }
 @media screen and (max-width: 1130px) {
-  .navbar .call {
+  .navbar .phone-number {
     display: none;
   }
 }
-.navbar .call:hover {
+.navbar .phone-number:hover {
   background-color: #4ab7e0;
-}
-.navbar .mobile-icon {
-  font-weight: 400;
-  font-size: 2.4rem;
-  display: none;
-}
-@media screen and (max-width: 768px) {
-  .navbar .mobile-icon {
-    position: relative;
-    display: flex;
-    gap: 32px;
-  }
-  .navbar .mobile-icon .cart-counter {
-    left: 20px;
-    top: -2px;
-    font-weight: 400;
-  }
 }
 
 .nav-menu li {
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .nav-menu li {
+    width: 100%;
+  }
 }
 .nav-menu li:not(:nth-child(1))::before {
   content: "";
@@ -187,4 +200,63 @@ p, a {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+}
+@media screen and (max-width: 768px) {
+  .nav-menu li:not(:nth-child(1))::before {
+    width: 55%;
+    height: 1px;
+    top: 0;
+    left: 12px;
+  }
+}
+
+.navbar .mobile-icon {
+  font-weight: 400;
+  font-size: 2rem;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navbar .mobile-icon {
+    display: flex;
+  }
+}
+
+.navbar .mobile-icon.contacts {
+  align-self: center;
+  margin: auto 0 50px;
+  flex-direction: column;
+}
+.navbar .mobile-icon.contacts .help-text {
+  font-size: 10px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.navbar .mobile-icon.contacts .help-text::after {
+  content: "";
+  width: 40%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.navbar .mobile-icon.contacts .contacts-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.navbar .mobile-icon.contacts .contacts-container a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0;
 }
