@@ -1,2 +1,36 @@
 
 
+div.banner{
+    padding: 60px 10% auto;
+    height:90vh;
+    // background-image: url(../../images/banner.JPG);
+    background-color: rgba(173, 216, 230, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+.banner-content{
+    width:50%;
+
+    p{
+        font-size:fontSize(level_4);
+    }
+
+    p.salutation{
+        font-family: $title_font;
+        font-weight: 500;
+    }
+
+    h1 span{
+        font-size: fontSize(level_1);
+
+        &:nth-child(2){
+            display: block;
+            width:max-content;
+            color:black;
+            opacity:.05;
+        }
+    }
+}
