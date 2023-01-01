@@ -1,15 +1,16 @@
 
 
-// HEADER - BANNER*
+// HEADER
 // -------------------------------------------
+
 div.banner{
     padding: 60px 10% 0;
     height:80vh;
-    background-image: url(../../images/banner.JPG);
+    background-color: rgba(173, 216, 230, 0.5);
+    // background-image: url(../../images/banner.JPG);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-color: rgba(173, 216, 230, 0.5);
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -46,29 +47,40 @@ div.banner{
 
 
 // SECTION - WHO AM I
+// -------------------------------
 
-section.who-am-i{
-    flex-direction: row;
-    align-items: flex-start;
+// section.who-am-i{
 
-    .left-side, .right-side{
-        display: flex;
-        flex-direction: column;
-        gap:20px;
-        width:50%;
+// }
+
+
+
+// SECTION - CONTACTS
+// --------------------------------
+
+section.contacts{
+
+    .left-side{
+        background-color: #cecece;
+        justify-content: center;
+        
+        p span{
+            display: block;
+            line-height:1.5;
+        }
+
+        p span:first-child{
+            font-size: fontSize(level_4);
+            font-weight: 600;
+        }
+
+        p span:not(:first-child){
+            font-size: fontSize(leve_3);
+            font-weight: 300;
+        }
     }
 
-    .main-title::after{
-        left:0;
-        transform: translateX(0);
-    }
-
-    .description{
-        width:90%;
-        font-size: fontSize(level_5);
-    }
-
-    .main-title, .description{
-        text-align: left;
+    .right-side{
+        background-color: lighten($color: $secondary_color, $amount: 38);
     }
 }

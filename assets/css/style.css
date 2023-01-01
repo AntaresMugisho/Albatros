@@ -284,11 +284,6 @@ section {
   gap: 20px;
   padding: 60px 10%;
 }
-section .description {
-  text-align: center;
-  font-size: 1.6rem;
-}
-
 section .main-title {
   font-size: 3.4rem;
   text-align: center;
@@ -307,15 +302,49 @@ section .main-title::after {
   left: 50%;
   transform: translateX(-50%);
 }
+section .description {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+section.container {
+  flex-direction: row;
+  gap: 0;
+  padding: 0;
+}
+section.container .left-side {
+  padding: 60px 60px 60px 10%;
+}
+section.container .right-side {
+  padding: 60px 10% 60px 60px;
+}
+section.container .left-side, section.container .right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  height: 100%;
+  min-height: 300px;
+}
+section.container .left-side .main-title::after, section.container .right-side .main-title::after {
+  left: 0;
+  transform: translateX(0);
+}
+section.container .left-side .description, section.container .left-side p, section.container .right-side .description, section.container .right-side p {
+  width: 80%;
+  font-size: 2rem;
+}
+section.container .left-side .main-title, section.container .left-side .description, section.container .right-side .main-title, section.container .right-side .description {
+  text-align: left;
+}
 
 div.banner {
   padding: 60px 10% 0;
   height: 80vh;
-  background-image: url(../../images/banner.JPG);
+  background-color: rgba(173, 216, 230, 0.5);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: rgba(173, 216, 230, 0.5);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -345,24 +374,21 @@ div.banner {
   opacity: 0.05;
 }
 
-section.who-am-i {
-  flex-direction: row;
-  align-items: flex-start;
+section.contacts .left-side {
+  background-color: #cecece;
+  justify-content: center;
 }
-section.who-am-i .left-side, section.who-am-i .right-side {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 50%;
+section.contacts .left-side p span {
+  display: block;
+  line-height: 1.5;
 }
-section.who-am-i .main-title::after {
-  left: 0;
-  transform: translateX(0);
+section.contacts .left-side p span:first-child {
+  font-size: 2.4rem;
+  font-weight: 600;
 }
-section.who-am-i .description {
-  width: 90%;
-  font-size: 2rem;
+section.contacts .left-side p span:not(:first-child) {
+  font-weight: 300;
 }
-section.who-am-i .main-title, section.who-am-i .description {
-  text-align: left;
+section.contacts .right-side {
+  background-color: #eff9fc;
 }
