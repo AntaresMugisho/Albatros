@@ -49,6 +49,7 @@ p, a {
   width: max-content;
   padding: 10px 20px;
   font-size: 2rem;
+  border: 2px solid #fff;
 }
 .btn-default {
   background-color: #0b5672;
@@ -494,6 +495,7 @@ section.services .services-container {
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
+  max-width: 930px;
 }
 section.services .services-container .service {
   display: flex;
