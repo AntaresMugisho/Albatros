@@ -314,6 +314,7 @@ section.container {
 }
 section.container .left-side {
   padding: 60px 60px 60px 10%;
+  justify-content: center;
 }
 section.container .right-side {
   padding: 60px 10% 60px 60px;
@@ -324,14 +325,14 @@ section.container .left-side, section.container .right-side {
   gap: 20px;
   width: 50%;
   height: 100%;
-  min-height: 300px;
+  min-height: 565px;
 }
 section.container .left-side .main-title::after, section.container .right-side .main-title::after {
   left: 0;
   transform: translateX(0);
 }
 section.container .left-side .description, section.container .left-side p, section.container .right-side .description, section.container .right-side p {
-  width: 80%;
+  width: 90%;
   font-size: 2rem;
 }
 section.container .left-side .main-title, section.container .left-side .description, section.container .right-side .main-title, section.container .right-side .description {
@@ -375,8 +376,7 @@ div.banner {
 }
 
 section.contacts .left-side {
-  background-color: #cecece;
-  justify-content: center;
+  background-color: #d8d8d8;
 }
 section.contacts .left-side p span {
   display: block;
@@ -391,4 +391,44 @@ section.contacts .left-side p span:not(:first-child) {
 }
 section.contacts .right-side {
   background-color: #eff9fc;
+}
+section.contacts .right-side .contacts-list {
+  position: relative;
+  padding-left: 40px;
+}
+section.contacts .right-side .contacts-list a {
+  display: block;
+  margin: 20px 0;
+}
+section.contacts .right-side .contacts-list a span:first-child {
+  font-size: 2rem;
+}
+section.contacts .right-side .contacts-list a span:last-child {
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #929292;
+  display: block;
+}
+section.contacts .right-side .contacts-list-icons-container {
+  height: 100%;
+  width: 6px;
+  background-color: #0b5672;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+section.contacts .right-side .contacts-list-icons-container i {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  color: #4ab7e0;
+  border-radius: 50%;
+  background-color: #4ab7e0;
 }

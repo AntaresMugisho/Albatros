@@ -61,8 +61,7 @@ div.banner{
 section.contacts{
 
     .left-side{
-        background-color: #cecece;
-        justify-content: center;
+        background-color: #d8d8d8;
         
         p span{
             display: block;
@@ -82,5 +81,53 @@ section.contacts{
 
     .right-side{
         background-color: lighten($color: $secondary_color, $amount: 38);
+    
+        .contacts-list{
+            position:relative;
+            padding-left:40px;
+
+
+            a{
+                display: block;
+                margin:20px 0;
+            }
+
+            a span:first-child{
+                font-size: fontSize(level_5);
+            }
+
+            a span:last-child{
+                font-size: fontSize(normal);
+                font-style: italic;
+                color:#929292;
+                display: block;
+            }
+        }
+
+
+        .contacts-list-icons-container{
+            height:100%;
+            width:6px;
+            background-color: $primary_color;
+            border-radius: 4px;
+            position:absolute;
+            left:0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            i{
+                @include flex_center;
+                width: 20px;
+                height: 20px;
+                color: $secondary_color;
+                border-radius:50%;
+                background-color: $secondary_color;
+                // transform: translateX(-50%)
+
+            }
+        }
     }
 }
