@@ -5,30 +5,29 @@ section{
     gap:20px;
     padding:60px 10%;
 
-    .main-title{
-        font-size: fontSize(level_3);
-        text-align:center;
-        padding-bottom:20px;
-        position:relative;
-
-        &::after{
-            content:"";
-            width:50%;
-            height:6px;
-            background-color: $primary_color;
-            border-radius:4px;
-            position:absolute;
-            bottom:0;
-            left:50%;
-            transform: translateX(-50%);
-
-        }
-    }
-
     .description{
         text-align: center;
         font-size: fontSize(normal);
     }
+}
 
+section .main-title{
 
+    font-size: fontSize(level_3);
+    text-align:center;
+    padding-bottom:20px;
+    position:relative;
+    max-width: max-content;
+
+    &::after{
+        content:"";
+        width:50%;
+        height:6px;
+        background-color: $primary_color;
+        border-radius:4px;
+        position:absolute;
+        bottom:0;
+        left:50%;
+        transform: translateX(-50%);
+    }
 }

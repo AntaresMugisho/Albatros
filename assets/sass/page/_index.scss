@@ -1,9 +1,14 @@
 
 
+// HEADER - BANNER*
+// -------------------------------------------
 div.banner{
     padding: 60px 10% 0;
     height:80vh;
-    // background-image: url(../../images/banner.JPG);
+    background-image: url(../../images/banner.JPG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     background-color: rgba(173, 216, 230, 0.5);
     display: flex;
     align-items: center;
@@ -35,5 +40,35 @@ div.banner{
             color:black;
             opacity:.05;
         }
+    }
+}
+
+
+
+// SECTION - WHO AM I
+
+section.who-am-i{
+    flex-direction: row;
+    align-items: flex-start;
+
+    .left-side, .right-side{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        width:50%;
+    }
+
+    .main-title::after{
+        left:0;
+        transform: translateX(0);
+    }
+
+    .description{
+        width:90%;
+        font-size: fontSize(level_5);
+    }
+
+    .main-title, .description{
+        text-align: left;
     }
 }

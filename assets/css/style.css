@@ -284,11 +284,17 @@ section {
   gap: 20px;
   padding: 60px 10%;
 }
+section .description {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
 section .main-title {
   font-size: 3.4rem;
   text-align: center;
   padding-bottom: 20px;
   position: relative;
+  max-width: max-content;
 }
 section .main-title::after {
   content: "";
@@ -301,14 +307,14 @@ section .main-title::after {
   left: 50%;
   transform: translateX(-50%);
 }
-section .description {
-  text-align: center;
-  font-size: 1.6rem;
-}
 
 div.banner {
   padding: 60px 10% 0;
   height: 80vh;
+  background-image: url(../../images/banner.JPG);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-color: rgba(173, 216, 230, 0.5);
   display: flex;
   align-items: center;
@@ -337,4 +343,26 @@ div.banner {
   width: max-content;
   color: black;
   opacity: 0.05;
+}
+
+section.who-am-i {
+  flex-direction: row;
+  align-items: flex-start;
+}
+section.who-am-i .left-side, section.who-am-i .right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+section.who-am-i .main-title::after {
+  left: 0;
+  transform: translateX(0);
+}
+section.who-am-i .description {
+  width: 90%;
+  font-size: 2rem;
+}
+section.who-am-i .main-title, section.who-am-i .description {
+  text-align: left;
 }
