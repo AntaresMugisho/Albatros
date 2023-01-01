@@ -2,7 +2,7 @@
 
 section{
     @include flex_center(column);
-    gap:20px;
+    gap:40px;
     padding:60px 10%;
 
     .main-title{
@@ -51,7 +51,6 @@ section.container{
         gap:20px;
         width: 50%;
         height: 100%;
-        min-height:565px;
 
         .main-title::after{
             left:0;
