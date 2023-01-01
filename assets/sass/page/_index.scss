@@ -141,6 +141,7 @@ section.statistics{
 
     .stats-container{
         @include flex_center;
+        flex-wrap: wrap;
         gap:40px;
 
         .stat{
@@ -172,4 +173,55 @@ section.statistics{
         }
     }
 
+}
+
+
+// SECTION SERVICES
+// ----------------------
+
+section.services{
+    background-color: $primary_color;
+    border-top: 12px solid;
+    border-bottom: 12px solid;
+    border-color:$secondary_color;
+
+
+    .main-title, p{
+        color:#fff;
+
+        &::after{
+            background-color: #fff;
+        }
+    }
+
+    .services-container{
+        @include flex_center;
+        flex-wrap: wrap;
+        gap:30px;
+    }
+
+    .services-container .service{
+        @include flex_start(column);
+        gap:12px;
+        width:280px;
+        min-width:280px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border:1px solid $secondary_color;
+        border-radius:6px;
+        padding:16px;
+
+        i{
+            font-size: fontSize(level_3);
+            color:$secondary_color;
+        }
+
+        &-name{
+            color:#fff;
+            font-size: fontSize(level_4);
+        }
+
+        &-description{
+            font-size: fontSize(normal);
+        }
+    }
 }

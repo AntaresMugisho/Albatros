@@ -305,6 +305,7 @@ section .main-title::after {
 section .description {
   text-align: center;
   font-size: 1.6rem;
+  width: 80%;
 }
 
 section.container {
@@ -440,6 +441,7 @@ section.statistics .stats-container {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 40px;
 }
 section.statistics .stats-container .stat {
@@ -471,4 +473,49 @@ section.statistics .stats-container .stat p:last-child {
   font-size: 1.6rem;
   font-weight: 300;
   width: 180px;
+}
+
+section.services {
+  background-color: #0b5672;
+  border-top: 12px solid;
+  border-bottom: 12px solid;
+  border-color: #4ab7e0;
+}
+section.services .main-title, section.services p {
+  color: #fff;
+}
+section.services .main-title::after, section.services p::after {
+  background-color: #fff;
+}
+section.services .services-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+section.services .services-container .service {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 12px;
+  width: 280px;
+  min-width: 280px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #4ab7e0;
+  border-radius: 6px;
+  padding: 16px;
+}
+section.services .services-container .service i {
+  font-size: 3.4rem;
+  color: #4ab7e0;
+}
+section.services .services-container .service-name {
+  color: #fff;
+  font-size: 2.4rem;
+}
+section.services .services-container .service-description {
+  font-size: 1.6rem;
 }
