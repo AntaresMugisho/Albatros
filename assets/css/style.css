@@ -79,9 +79,12 @@ p, a {
   }
 }
 .navbar .nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: #fff;
-  font-weight: 900;
-  font-size: 2.4rem;
+  font-weight: 400;
+  font-size: 2rem;
 }
 @media screen and (max-width: 768px) {
   .navbar .nav-brand {
@@ -90,9 +93,8 @@ p, a {
     font-size: 2rem;
   }
 }
-.navbar .nav-brand span:nth-child(1) {
-  color: #4ab7e0;
-  font-weight: 900;
+.navbar .nav-brand img {
+  width: 35px;
 }
 .navbar .nav-menu {
   display: flex;
@@ -276,9 +278,39 @@ p, a {
   margin: 0;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 10%;
+}
+section .main-title {
+  font-size: 3.4rem;
+  text-align: center;
+  padding-bottom: 20px;
+  position: relative;
+}
+section .main-title::after {
+  content: "";
+  width: 50%;
+  height: 6px;
+  background-color: #0b5672;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section .description {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
 div.banner {
   padding: 60px 10% 0;
-  height: 90vh;
+  height: 80vh;
   background-color: rgba(173, 216, 230, 0.5);
   display: flex;
   align-items: center;

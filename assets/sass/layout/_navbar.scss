@@ -23,9 +23,12 @@
     }
 
     .nav-brand{
+        display: flex;
+        align-items: center;
+        gap:10px;
         color:#fff;
-        font-weight:900;
-        font-size:fontSize(level_4);
+        font-weight:400;
+        font-size:fontSize(level_5);
 
         @include breakpoint(tablet){
             margin: 0 auto;
@@ -33,9 +36,8 @@
             font-size: fontSize(level_5);
         }
 
-        span:nth-child(1){
-            color:$secondary_color;
-            font-weight: 900;
+        img{
+            width:35px;
         }
     }
 
