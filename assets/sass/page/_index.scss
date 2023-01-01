@@ -1,17 +1,20 @@
 
 
 div.banner{
-    padding: 60px 10% auto;
+    padding: 60px 10% 0;
     height:90vh;
     // background-image: url(../../images/banner.JPG);
     background-color: rgba(173, 216, 230, 0.5);
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    
 }
 
 .banner-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:20px;
     width:50%;
 
     p{
@@ -24,7 +27,7 @@ div.banner{
     }
 
     h1 span{
-        font-size: fontSize(level_1);
+        font-size: fontSize(level_2);
 
         &:nth-child(2){
             display: block;
