@@ -10,6 +10,11 @@ footer{
     font-size: fontSize(level_5);
     font-weight: 300;
 
+    @include breakpoint(mobile){
+        @include flex_center(column);
+        gap:20px;
+    }
+
     .follow-invitation{
         padding-bottom:12px;
         margin-bottom:12px;
@@ -25,6 +30,12 @@ footer{
             bottom:0;
             left:0;
 
+        }
+    }
+
+    .social{
+        @include breakpoint(mobile){
+            align-self:flex-start;
         }
     }
 
