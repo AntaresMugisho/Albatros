@@ -252,7 +252,7 @@ section.utils{
             background-color: #fff;
             font-size:fontSize(normal);
             border-radius:8px;
-
+            box-shadow:0 4px 8px rgba(0, 0, 0, 0.1);
 
             .header{
                 display: flex;
@@ -272,7 +272,6 @@ section.utils{
         }
     }
 }
-
 
 .util .progressbar{
     background-color: $primary_color;
@@ -296,6 +295,67 @@ section.utils{
 
         &.figma{
             width:92%;
+        }
+    }
+}
+
+
+
+// SECTION PROJECTS
+// -----------------
+
+section.projects{
+    padding-left:0;
+    padding-right:0;
+
+    .tabs-container{
+        @include flex_center;
+        gap:12px;
+        background-color: $primary_color;
+        border-bottom:8px solid $secondary_color;
+        width:100%;
+        padding:10px 10%;
+
+    }
+
+    .tabs-container .tab{
+        color:#fff;
+        background-color: transparent;
+        font-size: fontSize(normal);
+        text-transform: uppercase;
+        padding:0 12px;
+        position:relative;
+
+        &:hover{
+            font-weight: 600;
+        }
+
+        &.active{
+            font-weight: 900;
+        }
+
+        &:not(:nth-child(1))::before{
+            content:"";
+            width:1px;
+            height:20px;
+            background-color:rgba(255, 255, 255, 0.3);
+            position: absolute;
+            top:50%;
+            left:-5%;
+            transform:translateY(-50%);
+        }
+
+        &.active::after{
+            content: "";
+            width:35px;
+            height:35px;
+            background-color: $secondary_color;
+            position:absolute;
+            z-index: -1;
+            bottom:-25px;
+            left:50%;
+            transform: translateX(-50%) rotate(45deg);
+            
         }
     }
 }

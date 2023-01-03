@@ -547,6 +547,7 @@ section.utils .utils-container .util {
   background-color: #fff;
   font-size: 1.6rem;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 section.utils .utils-container .util .header {
   display: flex;
@@ -581,4 +582,55 @@ section.utils .utils-container .util .utility {
 }
 .util .progressbar .progress-value.figma {
   width: 92%;
+}
+
+section.projects {
+  padding-left: 0;
+  padding-right: 0;
+}
+section.projects .tabs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: #0b5672;
+  border-bottom: 8px solid #4ab7e0;
+  width: 100%;
+  padding: 10px 10%;
+}
+section.projects .tabs-container .tab {
+  color: #fff;
+  background-color: transparent;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 0 12px;
+  position: relative;
+}
+section.projects .tabs-container .tab:hover {
+  font-weight: 600;
+}
+section.projects .tabs-container .tab.active {
+  font-weight: 900;
+}
+section.projects .tabs-container .tab:not(:nth-child(1))::before {
+  content: "";
+  width: 1px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  transform: translateY(-50%);
+}
+section.projects .tabs-container .tab.active::after {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background-color: #4ab7e0;
+  position: absolute;
+  z-index: -1;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
 }
