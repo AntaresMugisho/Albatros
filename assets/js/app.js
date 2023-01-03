@@ -42,3 +42,42 @@ const nav_links = document.getElementsByClassName("nav-link")
 for (const nav_link of nav_links){
     nav_link.addEventListener("click", toggle_menu)
 }
+
+
+// +--------------------------------+
+// | Update active navlink onscroll |
+// +--------------------------------+
+
+
+// Animations
+
+let options = {
+    // root: null,
+    rootMargin: "-100px 0px",
+    treshhold: .5
+}
+
+const observer = new IntersectionObserver(handle_intersect, options);
+
+const observables = document.querySelectorAll(".obs");
+
+observables.forEach(observable => {
+    if (observable.classList.contains("obs")){
+       observable.classList.add("obs--hide"); 
+    }
+
+    observer.observe(observable);
+})
+
+function handle_intersect(entries, observer){
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting){
+            entry.target.classList.remove("obs--hide");
+        }
+        else{
+            entry.target.classList.add("obs--hide");
+        }
+    })
+}

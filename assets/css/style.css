@@ -181,13 +181,14 @@ p, a {
   }
 }
 .navbar .phone-number {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   padding: 4px 12px;
   font-size: 1.4rem;
-  display: flex;
-  gap: 12px;
   transition: background-color 0.2s;
 }
 @media screen and (max-width: 1130px) {
@@ -765,4 +766,22 @@ section.projects .gallery img {
 }
 section.projects .gallery img:hover {
   transform: scale(1);
+}
+
+.obs {
+  opacity: 1;
+  transform: traslateY(0);
+  transition: transform 0.5s, opacity 0.5s;
+}
+.obs--hide {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .obs {
+    opacity: 1;
+    transform: traslate(0, 0);
+    transition: transform 0s, opacity 0s;
+  }
 }

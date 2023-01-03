@@ -409,3 +409,26 @@ section.projects{
         }
     }
 }
+
+
+// Animations
+// --------------------------------------
+
+.obs{
+    opacity:1;
+    transform:traslateY(0);
+    transition: transform .5s, opacity .5s;
+
+    &--hide{
+        opacity:0;
+        transform: translateY(50px);
+    }
+}
+
+@media (prefers-reduced-motion:reduce){
+    .obs{
+        opacity:1;
+        transform:traslate(0, 0);
+        transition: transform 0s, opacity 0s;
+    }
+}
