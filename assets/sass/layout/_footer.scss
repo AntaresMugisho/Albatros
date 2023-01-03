@@ -1,5 +1,44 @@
 
 
 footer{
- 
+    background-color: $primary_color;
+    color:#fff;
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    padding:30px 10%;
+    font-size: fontSize(level_5);
+    font-weight: 300;
+
+    .follow-invitation{
+        padding-bottom:12px;
+        margin-bottom:12px;
+        position:relative;
+
+        &::after{
+            content: "";
+            height:4px;
+            width:50%;
+            background-color: $secondary_color;
+            border-radius: 4px;
+            position:absolute;
+            bottom:0;
+            left:0;
+
+        }
+    }
+
+    .social .social-links{
+        display: flex;
+        gap:12px;
+
+        a{
+            @include flex_center;   
+
+            width:40px;
+            height:40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.315);
+        }
+    }
 }

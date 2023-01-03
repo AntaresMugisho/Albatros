@@ -340,6 +340,46 @@ section.container .left-side .main-title, section.container .left-side .descript
   text-align: left;
 }
 
+footer {
+  background-color: #0b5672;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 30px 10%;
+  font-size: 2rem;
+  font-weight: 300;
+}
+footer .follow-invitation {
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  position: relative;
+}
+footer .follow-invitation::after {
+  content: "";
+  height: 4px;
+  width: 50%;
+  background-color: #4ab7e0;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+footer .social .social-links {
+  display: flex;
+  gap: 12px;
+}
+footer .social .social-links a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.315);
+}
+
 div.banner {
   padding: 60px 10% 0;
   height: 80vh;
@@ -639,7 +679,6 @@ section.projects .gallery {
   flex-wrap: wrap;
   gap: 12px;
   padding: 20px 10%;
-  background-color: #f1f1f1;
 }
 section.projects .gallery li {
   width: 250px;
