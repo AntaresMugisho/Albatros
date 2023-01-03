@@ -308,18 +308,41 @@ section .description {
   font-size: 1.6rem;
   width: 80%;
 }
+@media screen and (max-width: 480px) {
+  section .description {
+    width: 100%;
+  }
+}
 
 section.container {
   flex-direction: row;
   gap: 0;
   padding: 0;
 }
+@media screen and (max-width: 480px) {
+  section.container {
+    flex-direction: column;
+  }
+}
 section.container .left-side {
   padding: 60px 60px 60px 10%;
   justify-content: center;
 }
+@media screen and (max-width: 480px) {
+  section.container .left-side {
+    padding-left: 5%;
+    padding-right: 5%;
+    height: max-content;
+  }
+}
 section.container .right-side {
   padding: 60px 10% 60px 60px;
+}
+@media screen and (max-width: 480px) {
+  section.container .right-side {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
 }
 section.container .left-side, section.container .right-side {
   display: flex;
@@ -327,6 +350,12 @@ section.container .left-side, section.container .right-side {
   gap: 20px;
   width: 50%;
   height: 100%;
+}
+@media screen and (max-width: 480px) {
+  section.container .left-side, section.container .right-side {
+    width: 100%;
+    height: fit-content;
+  }
 }
 section.container .left-side .main-title::after, section.container .right-side .main-title::after {
   left: 0;
@@ -405,6 +434,11 @@ div.banner {
   align-items: center;
   justify-content: flex-end;
 }
+@media screen and (max-width: 480px) {
+  div.banner {
+    justify-content: flex-start;
+  }
+}
 
 .banner-content {
   display: flex;
@@ -413,8 +447,18 @@ div.banner {
   gap: 20px;
   width: 50%;
 }
+@media screen and (max-width: 480px) {
+  .banner-content {
+    width: 100%;
+  }
+}
 .banner-content p {
   font-size: 2.4rem;
+}
+@media screen and (max-width: 480px) {
+  .banner-content p {
+    font-size: 2rem;
+  }
 }
 .banner-content p.salutation {
   font-family: "Montserrat", "sans-serif";
@@ -422,6 +466,11 @@ div.banner {
 }
 .banner-content h1 span {
   font-size: 5.56rem;
+}
+@media screen and (max-width: 480px) {
+  .banner-content h1 span {
+    font-size: 3.4rem;
+  }
 }
 .banner-content h1 span:nth-child(2) {
   display: block;
@@ -432,6 +481,11 @@ div.banner {
 
 section.contacts .left-side, section.contacts .right-side {
   min-height: 565px;
+}
+@media screen and (max-width: 480px) {
+  section.contacts .left-side, section.contacts .right-side {
+    min-height: unset;
+  }
 }
 section.contacts .left-side {
   background-color: #d8d8d8;
@@ -652,6 +706,12 @@ section.projects .tabs-container {
   border-bottom: 8px solid #4ab7e0;
   width: 100%;
   padding: 10px 10%;
+}
+@media screen and (max-width: 480px) {
+  section.projects .tabs-container {
+    overflow-x: scroll;
+    width: 100%;
+  }
 }
 section.projects .tabs-container .tab {
   color: #fff;

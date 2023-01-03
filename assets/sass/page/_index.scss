@@ -14,6 +14,10 @@ div.banner{
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @include breakpoint(mobile){
+        justify-content: flex-start;
+    }
 }
 
 .banner-content{
@@ -23,8 +27,16 @@ div.banner{
     gap:20px;
     width:50%;
 
+    @include breakpoint(mobile){
+        width:100%;
+    }
+
     p{
         font-size:fontSize(level_4);
+
+        @include breakpoint(mobile){
+            font-size: fontSize(level_5);
+        }
     }
 
     p.salutation{
@@ -34,6 +46,10 @@ div.banner{
 
     h1 span{
         font-size: fontSize(level_2);
+
+        @include breakpoint(mobile){
+            font-size: fontSize(level_3);
+        }
 
         &:nth-child(2){
             display: block;
@@ -61,6 +77,10 @@ div.banner{
 section.contacts{
     .left-side, .right-side{
         min-height:565px;   // Don't know why height:100% is not taking effect
+        
+        @include breakpoint(mobile){
+            min-height: unset;
+        }
     }
 
     .left-side{
@@ -315,6 +335,11 @@ section.projects{
         border-bottom:8px solid $secondary_color;
         width:100%;
         padding:10px 10%;
+
+        @include breakpoint(mobile){
+            overflow-x: scroll;
+            width:100%;
+        }
     }
 
     .tabs-container .tab{

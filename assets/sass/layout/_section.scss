@@ -29,6 +29,10 @@ section{
         text-align: center;
         font-size: fontSize(normal);
         width:80%;
+
+        @include breakpoint(mobile){
+            width:100%;
+        }
     }
 }
 
@@ -37,13 +41,28 @@ section.container{
     gap:0;
     padding:0;
 
+    @include breakpoint(mobile){
+        flex-direction:column;
+    }
+
     .left-side{
         padding: 60px 60px 60px 10%;
         justify-content: center;
+
+        @include breakpoint(mobile){
+            padding-left: 5%;
+            padding-right: 5%;
+            height: max-content;
+        }
     }
 
     .right-side{
         padding: 60px 10% 60px 60px;
+
+        @include breakpoint(mobile){
+            padding-right: 5%;
+            padding-left:5%;
+        }
     }
 
     .left-side, .right-side{
@@ -52,6 +71,11 @@ section.container{
         gap:20px;
         width: 50%;
         height: 100%;
+
+        @include breakpoint(mobile){
+            width:100%;
+            height: fit-content;
+        }
 
         .main-title::after{
             left:0;
