@@ -521,3 +521,64 @@ section.services .services-container .service-name {
 section.services .services-container .service-description {
   font-size: 1.6rem;
 }
+
+section.utils {
+  padding-left: 0;
+  padding-right: 0;
+}
+section.utils .utils-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: #f0f0f0;
+  padding: 40px 10%;
+  width: 100%;
+}
+section.utils .utils-container .util {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 280px;
+  max-width: 280px;
+  padding: 16px;
+  background-color: #fff;
+  font-size: 1.6rem;
+  border-radius: 8px;
+}
+section.utils .utils-container .util .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+}
+section.utils .utils-container .util .level {
+  font-size: 3.4rem;
+  font-weight: 700;
+}
+section.utils .utils-container .util .utility {
+  text-align: center;
+}
+
+.util .progressbar {
+  background-color: #0b5672;
+  width: 100%;
+  height: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.util .progressbar .progress-value {
+  height: 100%;
+  background-color: #4ab7e0;
+}
+.util .progressbar .progress-value.photoshop {
+  width: 90%;
+}
+.util .progressbar .progress-value.illustrator {
+  width: 85%;
+}
+.util .progressbar .progress-value.figma {
+  width: 92%;
+}

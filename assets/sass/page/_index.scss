@@ -226,3 +226,76 @@ section.services{
         }
     }
 }
+
+
+// SECTION - UTILS
+
+section.utils{
+    padding-left:0;
+    padding-right:0;
+
+    .utils-container{
+        @include flex_center;
+        flex-wrap: wrap;
+        gap:30px;
+        background-color: #f0f0f0;
+        padding:40px 10%;
+        width:100%;
+
+        .util{
+            display: flex;
+            flex-direction:column;
+            gap:16px;
+            width:280px;
+            max-width: 280px;
+            padding:16px;
+            background-color: #fff;
+            font-size:fontSize(normal);
+            border-radius:8px;
+
+
+            .header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: fontSize(level_5);
+            }
+
+            .level{
+                font-size:fontSize(level_3);
+                font-weight: 700;
+            }
+
+            .utility{
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+.util .progressbar{
+    background-color: $primary_color;
+    width:100%;
+    height:8px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .progress-value{
+        height: 100%;
+        background-color: $secondary_color;
+
+        &.photoshop{
+            width:90%;
+        }
+
+        &.illustrator{
+            width:85%;
+            // background-color: orangered;
+        }
+
+        &.figma{
+            width:92%;
+        }
+    }
+}
