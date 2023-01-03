@@ -66,7 +66,8 @@ observables.forEach(observable => {
        observable.classList.add("obs--hide"); 
     }
 
-    observer.observe(observable);
+    observer.observe(observable, comp);
+    
 })
 
 function handle_intersect(entries, observer){
@@ -81,3 +82,9 @@ function handle_intersect(entries, observer){
         }
     })
 }
+
+// Active menu indicator
+// -------------------------------------------------
+
+//let comp = document.getElementById("competences")
+//let comp_link = document.querySelector(".nav-link.competences")
