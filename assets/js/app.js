@@ -98,3 +98,35 @@ function handleIntersect(entries, observer){
         }
     })
 }
+
+// +--------------------------------+
+// | Manage tabs in project section |
+// +--------------------------------+
+
+const tabs = document.querySelectorAll(".tab")
+const gallery_items = document.querySelectorAll(".gallery li")
+
+tabs.forEach( tab => {
+    tab.addEventListener("click", (e) => {
+        tabs.forEach(tab =>{tab.classList.remove("active")})
+        
+        categories = ["all", "graphic", "web", "ui", "other"]
+        for (let category of categories){
+
+            if (e.target.classList.contains(category)){
+                e.target.classList.add("active")
+
+                gallery_items.forEach(gallery_item =>{
+                    gallery_item.style.display = "block"
+           
+                    if (gallery_item.classList.contains(category) || e.target.classList.contains("all")){
+                        gallery_item.style.display = "block"
+                    }
+                    else{
+                        gallery_item.style.display = "none"
+                    }
+                })
+            }
+        }
+    })
+})
