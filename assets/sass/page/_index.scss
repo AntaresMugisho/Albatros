@@ -4,18 +4,19 @@
 // -------------------------------------------
 
 div.banner{
-    padding: 60px 10% 0;
+    padding: 60px 0 0 10%;
     height:80vh;
-    background-color: rgba(173, 216, 230, 0.5);
-    // background-image: url(../../images/banner.JPG);
+    background-color: rgba(173, 216, 230, 0.3);
+    background-image: url(../../images/banner.JPG);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: -10em 0;
+    background-size: auto 80vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
     @include breakpoint(mobile){
+        padding-left:0;
         justify-content: flex-start;
     }
 }
@@ -23,9 +24,13 @@ div.banner{
 .banner-content{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
     gap:20px;
-    width:50%;
+    width:60%;
+    height:100%;
+    padding:0 10%;
+    background-color: rgb(173, 216, 230);
 
     @include breakpoint(mobile){
         width:100%;
@@ -73,7 +78,7 @@ div.banner{
 // --------------------------------
 
 section.contacts{
-    background-color: #d8d8d8;
+    background-color: #f0f0f0;
 
     .left-side, .right-side{
         

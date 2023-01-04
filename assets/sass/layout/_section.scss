@@ -15,6 +15,10 @@ section{
         padding-bottom:20px;
         position:relative;
         max-width: max-content;
+
+        @include breakpoint(mobile){
+            font-size:fontSize(level_4);
+        }
     
         &::after{
             content:"";
