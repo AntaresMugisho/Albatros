@@ -158,6 +158,90 @@ section.contacts{
 }
 
 
+// SECTION - COMPETENCES | UTILS
+
+section.utils{
+    padding-left:0;
+    padding-right:0;
+
+    .description{
+        padding:0 10%;
+        
+        @include breakpoint(mobile){
+            padding: 0 5%;
+        }
+    }
+
+    .utils-container{
+        @include flex_center;
+        flex-wrap: wrap;
+        gap:30px;
+        background-color: #f0f0f0;
+        padding:40px 10%;
+        width:100%;
+
+        @include breakpoint(mobile){
+            padding:20px 0;
+        }
+
+        .util{
+            display: flex;
+            flex-direction:column;
+            gap:16px;
+            width:280px;
+            max-width: 280px;
+            padding:16px;
+            background-color: #fff;
+            font-size:fontSize(normal);
+            border-radius:8px;
+            box-shadow:0 4px 8px rgba(0, 0, 0, 0.1);
+
+            .header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: fontSize(level_5);
+            }
+
+            .level{
+                font-size:fontSize(level_3);
+                font-weight: 700;
+            }
+
+            .utility{
+                text-align: center;
+            }
+        }
+    }
+}
+
+.util .progressbar{
+    background-color: $primary_color;
+    width:100%;
+    height:8px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .progress-value{
+        height: 100%;
+        background-color: $secondary_color;
+
+        &.photoshop{
+            width:90%;
+        }
+
+        &.illustrator{
+            width:85%;
+            // background-color: orangered;
+        }
+
+        &.figma{
+            width:92%;
+        }
+    }
+}
+
+
 // SECTION - STATISTICS
 // ---------------------------------
 
@@ -251,84 +335,20 @@ section.services{
 }
 
 
-// SECTION - UTILS
-
-section.utils{
-    padding-left:0;
-    padding-right:0;
-
-    .utils-container{
-        @include flex_center;
-        flex-wrap: wrap;
-        gap:30px;
-        background-color: #f0f0f0;
-        padding:40px 10%;
-        width:100%;
-
-        .util{
-            display: flex;
-            flex-direction:column;
-            gap:16px;
-            width:280px;
-            max-width: 280px;
-            padding:16px;
-            background-color: #fff;
-            font-size:fontSize(normal);
-            border-radius:8px;
-            box-shadow:0 4px 8px rgba(0, 0, 0, 0.1);
-
-            .header{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font-size: fontSize(level_5);
-            }
-
-            .level{
-                font-size:fontSize(level_3);
-                font-weight: 700;
-            }
-
-            .utility{
-                text-align: center;
-            }
-        }
-    }
-}
-
-.util .progressbar{
-    background-color: $primary_color;
-    width:100%;
-    height:8px;
-    border-radius: 8px;
-    overflow: hidden;
-
-    .progress-value{
-        height: 100%;
-        background-color: $secondary_color;
-
-        &.photoshop{
-            width:90%;
-        }
-
-        &.illustrator{
-            width:85%;
-            // background-color: orangered;
-        }
-
-        &.figma{
-            width:92%;
-        }
-    }
-}
-
-
 // SECTION PROJECTS
 // -----------------
 
 section.projects{
     padding-left:0;
     padding-right:0;
+
+    .description{
+        padding:0 10%;
+        
+        @include breakpoint(mobile){
+            padding: 0 5%;
+        }
+    }
 
     .tabs-container{
         @include flex_center;
@@ -339,8 +359,11 @@ section.projects{
         padding:10px 10%;
 
         @include breakpoint(mobile){
+            @include flex_start;
             overflow-x: scroll;
-            width:100%;
+            overflow-y: hidden;
+            padding:5px 5%;
+            border-width:4px;
         }
     }
 
@@ -351,6 +374,8 @@ section.projects{
         text-transform: uppercase;
         padding:0 12px;
         position:relative;
+        display:block;
+        min-width:max-content;
 
         &:hover{
             font-weight: 600;
@@ -381,6 +406,16 @@ section.projects{
             bottom:-25px;
             left:50%;
             transform: translateX(-50%) rotate(45deg);
+
+            @include breakpoint(mobile){
+                // width:25px;
+                // height:25px;
+                // bottom:-15px; 
+                width:20px;
+                height:20px;
+                bottom:-22px;
+                z-index: 1;
+            }
         }
     }
 
@@ -390,6 +425,10 @@ section.projects{
         justify-content: center;
         gap:16px;
         padding:20px 10%;
+
+        @include breakpoint(mobile){
+            padding:0 5%;
+        }
      
         li{
             flex-grow: 1;
@@ -402,13 +441,11 @@ section.projects{
             width:100%;
             height:100%;
             object-fit: cover;
-
-            transform: scale(1);
             transition: transform .3s;
-                        // object-fit .2s;
+
             &:hover{
                 transform: scale(1.05);
-                // object-fit: scale-down;
+                // object-fit: scale-down;  // Don't know how to make a transition on this property
             }
         }
     }

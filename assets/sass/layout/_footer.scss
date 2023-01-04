@@ -13,6 +13,8 @@ footer{
     @include breakpoint(mobile){
         @include flex_center(column);
         gap:20px;
+        font-size: fontSize(normal);
+        padding: 30px 5%;
     }
 
     .follow-invitation{

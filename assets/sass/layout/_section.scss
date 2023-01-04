@@ -5,6 +5,10 @@ section{
     gap:40px;
     padding:60px 10%;
 
+    @include breakpoint(mobile){
+        padding:30px 5%;
+    }
+
     .main-title{
         font-size: fontSize(level_3);
         text-align:center;

@@ -319,6 +319,11 @@ section {
   gap: 40px;
   padding: 60px 10%;
 }
+@media screen and (max-width: 480px) {
+  section {
+    padding: 30px 5%;
+  }
+}
 section .main-title {
   font-size: 3.4rem;
   text-align: center;
@@ -424,6 +429,8 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    font-size: 1.6rem;
+    padding: 30px 5%;
   }
 }
 footer .follow-invitation {
@@ -591,6 +598,81 @@ section.contacts .right-side .contacts-list-icons-container i {
   background-color: #4ab7e0;
 }
 
+section.utils {
+  padding-left: 0;
+  padding-right: 0;
+}
+section.utils .description {
+  padding: 0 10%;
+}
+@media screen and (max-width: 480px) {
+  section.utils .description {
+    padding: 0 5%;
+  }
+}
+section.utils .utils-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: #f0f0f0;
+  padding: 40px 10%;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  section.utils .utils-container {
+    padding: 20px 0;
+  }
+}
+section.utils .utils-container .util {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 280px;
+  max-width: 280px;
+  padding: 16px;
+  background-color: #fff;
+  font-size: 1.6rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+section.utils .utils-container .util .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+}
+section.utils .utils-container .util .level {
+  font-size: 3.4rem;
+  font-weight: 700;
+}
+section.utils .utils-container .util .utility {
+  text-align: center;
+}
+
+.util .progressbar {
+  background-color: #0b5672;
+  width: 100%;
+  height: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.util .progressbar .progress-value {
+  height: 100%;
+  background-color: #4ab7e0;
+}
+.util .progressbar .progress-value.photoshop {
+  width: 90%;
+}
+.util .progressbar .progress-value.illustrator {
+  width: 85%;
+}
+.util .progressbar .progress-value.figma {
+  width: 92%;
+}
+
 section.statistics .stats-container {
   display: flex;
   flex-direction: row;
@@ -676,71 +758,17 @@ section.services .services-container .service-description {
   font-size: 1.6rem;
 }
 
-section.utils {
-  padding-left: 0;
-  padding-right: 0;
-}
-section.utils .utils-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  background-color: #f0f0f0;
-  padding: 40px 10%;
-  width: 100%;
-}
-section.utils .utils-container .util {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 280px;
-  max-width: 280px;
-  padding: 16px;
-  background-color: #fff;
-  font-size: 1.6rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-section.utils .utils-container .util .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 2rem;
-}
-section.utils .utils-container .util .level {
-  font-size: 3.4rem;
-  font-weight: 700;
-}
-section.utils .utils-container .util .utility {
-  text-align: center;
-}
-
-.util .progressbar {
-  background-color: #0b5672;
-  width: 100%;
-  height: 8px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.util .progressbar .progress-value {
-  height: 100%;
-  background-color: #4ab7e0;
-}
-.util .progressbar .progress-value.photoshop {
-  width: 90%;
-}
-.util .progressbar .progress-value.illustrator {
-  width: 85%;
-}
-.util .progressbar .progress-value.figma {
-  width: 92%;
-}
-
 section.projects {
   padding-left: 0;
   padding-right: 0;
+}
+section.projects .description {
+  padding: 0 10%;
+}
+@media screen and (max-width: 480px) {
+  section.projects .description {
+    padding: 0 5%;
+  }
 }
 section.projects .tabs-container {
   display: flex;
@@ -755,8 +783,14 @@ section.projects .tabs-container {
 }
 @media screen and (max-width: 480px) {
   section.projects .tabs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
     overflow-x: scroll;
-    width: 100%;
+    overflow-y: hidden;
+    padding: 5px 5%;
+    border-width: 4px;
   }
 }
 section.projects .tabs-container .tab {
@@ -766,6 +800,8 @@ section.projects .tabs-container .tab {
   text-transform: uppercase;
   padding: 0 12px;
   position: relative;
+  display: block;
+  min-width: max-content;
 }
 section.projects .tabs-container .tab:hover {
   font-weight: 600;
@@ -794,12 +830,25 @@ section.projects .tabs-container .tab.active::after {
   left: 50%;
   transform: translateX(-50%) rotate(45deg);
 }
+@media screen and (max-width: 480px) {
+  section.projects .tabs-container .tab.active::after {
+    width: 20px;
+    height: 20px;
+    bottom: -22px;
+    z-index: 1;
+  }
+}
 section.projects .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
   padding: 20px 10%;
+}
+@media screen and (max-width: 480px) {
+  section.projects .gallery {
+    padding: 0 5%;
+  }
 }
 section.projects .gallery li {
   flex-grow: 1;
@@ -811,7 +860,6 @@ section.projects .gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1);
   transition: transform 0.3s;
 }
 section.projects .gallery img:hover {
