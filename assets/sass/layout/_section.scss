@@ -84,6 +84,10 @@ section.container{
         .description, p{
             width:90%;
             font-size: fontSize(level_5);
+
+            @include breakpoint(mobile){
+                font-size: fontSize(normal);
+            }
         }
     
         .main-title, .description{

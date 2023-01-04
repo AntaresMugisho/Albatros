@@ -33,6 +33,7 @@ div.banner{
 
     p{
         font-size:fontSize(level_4);
+        font-family: $title_font;
 
         @include breakpoint(mobile){
             font-size: fontSize(level_5);
@@ -75,7 +76,6 @@ section.contacts{
     background-color: #d8d8d8;
 
     .left-side, .right-side{
-        // min-height:565px;   // Don't know why height:100% is not taking effect
         
         @include breakpoint(mobile){
             min-height: unset;
@@ -107,7 +107,6 @@ section.contacts{
             position:relative;
             padding-left:40px;
 
-
             a{
                 display: block;
                 margin:20px 0;
@@ -115,6 +114,10 @@ section.contacts{
 
             a span:first-child{
                 font-size: fontSize(level_5);
+
+                @include breakpoint(mobile){
+                    font-size: fontSize(normal);
+                }
             }
 
             a span:last-child{
@@ -122,6 +125,10 @@ section.contacts{
                 font-style: italic;
                 color:#929292;
                 display: block;
+
+                @include breakpoint(mobile){
+                    font-size: 1.4rem;
+                }
             }
         }
 

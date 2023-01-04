@@ -35,11 +35,11 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", "sans-serif";
+  font-family: "Montserrat", sans-serif;
 }
 
 p, a {
-  font-family: "Source Sans Pro", "sans-serif";
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .btn {
@@ -267,6 +267,7 @@ p, a {
 @media screen and (max-width: 768px) {
   .navbar .mobile-icon {
     display: flex;
+    color: #fff;
   }
 }
 
@@ -397,6 +398,11 @@ section.container .left-side .description, section.container .left-side p, secti
   width: 90%;
   font-size: 2rem;
 }
+@media screen and (max-width: 480px) {
+  section.container .left-side .description, section.container .left-side p, section.container .right-side .description, section.container .right-side p {
+    font-size: 1.6rem;
+  }
+}
 section.container .left-side .main-title, section.container .left-side .description, section.container .right-side .main-title, section.container .right-side .description {
   text-align: left;
 }
@@ -486,6 +492,7 @@ div.banner {
 }
 .banner-content p {
   font-size: 2.4rem;
+  font-family: "Montserrat", sans-serif;
 }
 @media screen and (max-width: 480px) {
   .banner-content p {
@@ -493,7 +500,7 @@ div.banner {
   }
 }
 .banner-content p.salutation {
-  font-family: "Montserrat", "sans-serif";
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
 .banner-content h1 span {
@@ -544,11 +551,21 @@ section.contacts .right-side .contacts-list a {
 section.contacts .right-side .contacts-list a span:first-child {
   font-size: 2rem;
 }
+@media screen and (max-width: 480px) {
+  section.contacts .right-side .contacts-list a span:first-child {
+    font-size: 1.6rem;
+  }
+}
 section.contacts .right-side .contacts-list a span:last-child {
   font-size: 1.6rem;
   font-style: italic;
   color: #929292;
   display: block;
+}
+@media screen and (max-width: 480px) {
+  section.contacts .right-side .contacts-list a span:last-child {
+    font-size: 1.4rem;
+  }
 }
 section.contacts .right-side .contacts-list-icons-container {
   height: 100%;
