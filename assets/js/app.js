@@ -48,43 +48,53 @@ for (const nav_link of nav_links){
 // | Update active navlink onscroll |
 // +--------------------------------+
 
-
-// Animations
-
 let options = {
     // root: null,
     rootMargin: "-100px 0px",
     treshhold: .5
 }
 
-const observer = new IntersectionObserver(handle_intersect, options);
+const observer = new IntersectionObserver(handleIntersect, options);
 
-const observables = document.querySelectorAll(".obs");
-
+// Animations
+const observables = document.querySelectorAll(".obs")
 observables.forEach(observable => {
     if (observable.classList.contains("obs")){
-       observable.classList.add("obs--hide"); 
+        observable.classList.add("obs--hide")
     }
-
-    observer.observe(observable, comp);
-    
+    observer.observe(observable)
 })
 
-function handle_intersect(entries, observer){
+// Observe sections to show active navlink
+const sections = document.querySelectorAll("[id]")
+sections.forEach(section => {
+    observer.observe(section)
+})
+
+function handleIntersect(entries, observer){
 
     entries.forEach(entry => {
 
-        if (entry.isIntersecting){
-            entry.target.classList.remove("obs--hide");
+         // Manage observables small elements for animation
+         if (entry.target.classList.contains("obs")){
+            if (entry.isIntersecting){
+                entry.target.classList.remove("obs--hide")
+            }
+            else{
+                entry.target.classList.add("obs--hide")
+            }
         }
-        else{
-            entry.target.classList.add("obs--hide");
+
+        // Manage sections intersecting
+        if (entry.target.attributes["id"] !== undefined){
+            if (entry.isIntersecting){
+                for (const nav_link of nav_links){
+                    nav_link.classList.remove("active")
+                    if (entry.target.attributes["id"].value === nav_link.hash.replace("#", "")){
+                        nav_link.classList.add("active")
+                    }
+                }
+            }
         }
     })
 }
-
-// Active menu indicator
-// -------------------------------------------------
-
-//let comp = document.getElementById("competences")
-//let comp_link = document.querySelector(".nav-link.competences")
