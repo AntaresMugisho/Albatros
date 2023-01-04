@@ -49,11 +49,43 @@ p, a {
   width: max-content;
   padding: 10px 20px;
   font-size: 2rem;
-  border: 2px solid #fff;
+  color: #fff;
+  position: relative;
+}
+.btn::after, .btn::before {
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  position: absolute;
+  transition: height 0.2s, width 0.2s 0.2s;
+  z-index: 1;
+}
+.btn::before {
+  bottom: 0;
+  left: 0;
+  border-left: solid #4ab7e0;
+  border-top: solid #4ab7e0;
+}
+.btn::after {
+  top: 0;
+  right: 0;
+  border-right: solid #4ab7e0;
+  border-bottom: solid #4ab7e0;
+}
+.btn:hover::before, .btn:hover::after {
+  border-width: 4px;
+  width: 100%;
+  height: 100%;
 }
 .btn-default {
   background-color: #0b5672;
-  color: #fff;
+}
+.btn-bordered {
+  border: 2px solid #fff;
+}
+.btn-bordered:hover {
+  border-color: transparent;
 }
 
 .navbar {
@@ -756,6 +788,7 @@ section.projects .gallery li {
   flex-grow: 1;
   height: 250px;
   background-color: rgb(255, 255, 255);
+  transition: all 1s 0.3s;
 }
 section.projects .gallery img {
   width: 100%;
