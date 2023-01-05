@@ -125,7 +125,7 @@ p, a {
   }
 }
 .navbar .nav-brand img {
-  width: 35px;
+  height: 35px;
 }
 .navbar .nav-menu {
   display: flex;
