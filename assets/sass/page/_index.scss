@@ -4,7 +4,7 @@
 // -------------------------------------------
 
 div.banner{
-    padding: 60px 0 0 10%;
+    padding: 56px 0 0 10%;
     height:80vh;
     background-color: rgba(173, 216, 230, 0.3);
     background-image: url(../../images/banner.JPG);
@@ -34,6 +34,11 @@ div.banner{
 
     @include breakpoint(mobile){
         width:100%;
+        color:#fff;
+        padding-left:5%;
+        padding-right:5%;
+        background-color: rgba(0, 0, 0, 0.6);
+        // backdrop-filter:blur(6px);
     }
 
     p{
@@ -61,7 +66,7 @@ div.banner{
             display: block;
             width:max-content;
             color:black;
-            opacity:.05;
+            opacity:.2;
         }
     }
 }
@@ -70,7 +75,22 @@ div.banner{
 // SECTION - WHO AM I
 // -------------------------------
 
+section.who-am-i{
+    .right-side{
+        @include flex_center;
+        @include breakpoint(mobile){
+            padding:30px 5%;
+        }
 
+        img{
+            width:300px;
+
+            @include breakpoint(mobile){
+                width:200px;
+            }
+        }
+    }
+}
 
 
 

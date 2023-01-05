@@ -181,6 +181,10 @@
     @include breakpoint(tablet){
         display: flex;
         color:#fff;
+
+        i{
+            color:#fff;
+        }
     }
 }
 
@@ -219,8 +223,24 @@
             width:35px;
             height:35px;
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgb(255, 255, 255, 1);
             margin:0;
+        }
+
+        i.phone{
+            color:rgb(3, 151, 3);
+        }
+
+        i.messenger{
+            color:#006AFF;
+        }
+
+        i.whatsapp{
+            color:#25D366;
+        }
+
+        i.mail{
+            color:#ff0000;
         }
     }
 }

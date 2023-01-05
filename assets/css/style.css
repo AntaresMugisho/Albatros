@@ -59,7 +59,7 @@ p, a {
   background-color: transparent;
   position: absolute;
   transition: height 0.2s, width 0.2s 0.2s;
-  z-index: 1;
+  visibility: hidden;
 }
 .btn::before {
   bottom: 0;
@@ -74,6 +74,7 @@ p, a {
   border-bottom: solid #4ab7e0;
 }
 .btn:hover::before, .btn:hover::after {
+  visibility: visible;
   border-width: 4px;
   width: 100%;
   height: 100%;
@@ -269,6 +270,9 @@ p, a {
     display: flex;
     color: #fff;
   }
+  .navbar .mobile-icon i {
+    color: #fff;
+  }
 }
 
 .navbar .mobile-icon.contacts {
@@ -307,8 +311,20 @@ p, a {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgb(255, 255, 255);
   margin: 0;
+}
+.navbar .mobile-icon.contacts .contacts-container i.phone {
+  color: rgb(3, 151, 3);
+}
+.navbar .mobile-icon.contacts .contacts-container i.messenger {
+  color: #006AFF;
+}
+.navbar .mobile-icon.contacts .contacts-container i.whatsapp {
+  color: #25D366;
+}
+.navbar .mobile-icon.contacts .contacts-container i.mail {
+  color: #ff0000;
 }
 
 section {
@@ -470,11 +486,27 @@ footer .social .social-links a {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.315);
+  background-color: rgb(255, 255, 255);
+  transition: border 0.2s;
+}
+footer .social .social-links a:hover {
+  border: 2px solid #4ab7e0;
+}
+footer .social .social-links a i.facebook {
+  color: #4267B2;
+}
+footer .social .social-links a i.instagram {
+  color: #ee2a7b;
+}
+footer .social .social-links a i.youtube {
+  color: #ff0000;
+}
+footer .social .social-links a i.twitter {
+  color: #1DA1F2;
 }
 
 div.banner {
-  padding: 60px 0 0 10%;
+  padding: 56px 0 0 10%;
   height: 80vh;
   background-color: rgba(173, 216, 230, 0.3);
   background-image: url(../../images/banner.JPG);
@@ -506,6 +538,10 @@ div.banner {
 @media screen and (max-width: 480px) {
   .banner-content {
     width: 100%;
+    color: #fff;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: rgba(0, 0, 0, 0.6);
   }
 }
 .banner-content p {
@@ -533,7 +569,27 @@ div.banner {
   display: block;
   width: max-content;
   color: black;
-  opacity: 0.05;
+  opacity: 0.2;
+}
+
+section.who-am-i .right-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  section.who-am-i .right-side {
+    padding: 30px 5%;
+  }
+}
+section.who-am-i .right-side img {
+  width: 300px;
+}
+@media screen and (max-width: 480px) {
+  section.who-am-i .right-side img {
+    width: 200px;
+  }
 }
 
 section.contacts {

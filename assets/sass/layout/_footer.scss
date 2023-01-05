@@ -47,11 +47,31 @@ footer{
 
         a{
             @include flex_center;   
-
             width:40px;
             height:40px;
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.315);
+            background-color: rgba(255, 255, 255, 1);
+            transition:border .2s;
+
+            &:hover{
+                border:2px solid $secondary_color;
+            }
+
+            i.facebook{
+                color:#4267B2;
+            }
+    
+            i.instagram{
+                color:#ee2a7b;
+            }
+    
+            i.youtube{
+                color:#ff0000;
+            }
+    
+            i.twitter{
+                color:#1DA1F2;
+            }
         }
     }
 }
