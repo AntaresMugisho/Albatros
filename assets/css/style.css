@@ -278,7 +278,7 @@ p, a {
 
 .navbar .mobile-icon.contacts {
   align-self: center;
-  margin: auto 0 80px;
+  margin: auto 0 100px;
   flex-direction: column;
 }
 .navbar .mobile-icon.contacts .help-text {
