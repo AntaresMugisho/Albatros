@@ -230,6 +230,10 @@ section.utils{
                 justify-content: space-between;
                 align-items: center;
                 font-size: fontSize(level_5);
+
+                img{
+                    width:30px;
+                }
             }
 
             .level{
@@ -261,7 +265,6 @@ section.utils{
 
         &.illustrator{
             width:85%;
-            // background-color: orangered;
         }
 
         &.figma{

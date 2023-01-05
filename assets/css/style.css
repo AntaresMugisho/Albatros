@@ -324,7 +324,7 @@ p, a {
   color: #25D366;
 }
 .navbar .mobile-icon.contacts .contacts-container i.mail {
-  color: #ff0000;
+  color: #000000;
 }
 
 section {
@@ -715,6 +715,9 @@ section.utils .utils-container .util .header {
   justify-content: space-between;
   align-items: center;
   font-size: 2rem;
+}
+section.utils .utils-container .util .header img {
+  width: 30px;
 }
 section.utils .utils-container .util .level {
   font-size: 3.4rem;
