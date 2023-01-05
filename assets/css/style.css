@@ -931,6 +931,9 @@ section.projects .gallery li {
   background-color: rgb(255, 255, 255);
   transition: all 1s 0.3s;
 }
+section.projects .gallery li.web, section.projects .gallery li.ui {
+  display: none;
+}
 section.projects .gallery img {
   width: 100%;
   height: 100%;

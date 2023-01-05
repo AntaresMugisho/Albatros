@@ -469,6 +469,10 @@ section.projects{
             transition: all 1s .3s;
         }
 
+        li.web, li.ui{
+            display:none;
+        }
+
         img{
             width:100%;
             height:100%;

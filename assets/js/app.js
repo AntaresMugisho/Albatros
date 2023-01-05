@@ -110,7 +110,7 @@ tabs.forEach( tab => {
     tab.addEventListener("click", (e) => {
         tabs.forEach(tab =>{tab.classList.remove("active")})
         
-        categories = ["all", "graphic", "web", "ui", "other"]
+        categories = ["all", "graphic", "web", "ui"]
         for (let category of categories){
 
             if (e.target.classList.contains(category)){
