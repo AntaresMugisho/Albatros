@@ -23,6 +23,7 @@ input[type=button],
 button {
   border: none;
   outline: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -575,6 +576,66 @@ div.banner {
   .banner-content h1 span:nth-child(2) {
     color: #fff;
   }
+}
+
+.quick-contact {
+  border-radius: 25px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  transition: background-color 0.2s;
+}
+.quick-contact:hover {
+  background-color: #0f79a1;
+}
+.quick-contact::before, .quick-contact::after {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .quick-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+  .quick-contact span {
+    display: none;
+  }
+}
+
+.popup {
+  background-color: #f1f1f1;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  position: fixed;
+  right: 30px;
+  bottom: 80px;
+  transition: background-color 0.2s;
+  transform: scale(0);
+  visibility: hidden;
+  z-index: 100;
+}
+.popup-show {
+  visibility: visible;
+  transform: scale(1);
+  transition: scale 0.2s;
+}
+.popup a {
+  display: flex;
+  gap: 12px;
+  padding: 10px 16px;
+  min-width: 180px;
+  font-size: 1.6rem;
+  transition: color 0.2s;
+}
+.popup a:not(:last-child) {
+  border-bottom: 1px solid rgb(168, 168, 168);
+}
+.popup a:hover {
+  color: #0b5672;
 }
 
 section.who-am-i .right-side {

@@ -45,6 +45,21 @@ for (const nav_link of nav_links){
 
 
 // +--------------------------------+
+// | Quick contact section          |
+// +--------------------------------+
+
+let contact_btns = document.querySelectorAll(".contact-btn")
+let popup = document.querySelector(".popup")
+
+for (let contact_btn of contact_btns){
+    contact_btn.addEventListener("click", () =>{
+        console.log("Hey")
+        popup.classList.toggle("popup-show")
+    })
+}
+
+
+// +--------------------------------+
 // | Update active navlink onscroll |
 // +--------------------------------+
 
