@@ -571,6 +571,11 @@ div.banner {
   color: black;
   opacity: 0.2;
 }
+@media screen and (max-width: 480px) {
+  .banner-content h1 span:nth-child(2) {
+    color: #fff;
+  }
+}
 
 section.who-am-i .right-side {
   display: flex;

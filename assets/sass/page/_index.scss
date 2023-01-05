@@ -67,6 +67,10 @@ div.banner{
             width:max-content;
             color:black;
             opacity:.2;
+
+            @include breakpoint(mobile){
+                color:#fff;
+            }
         }
     }
 }
