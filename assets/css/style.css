@@ -972,7 +972,7 @@ section.projects .tabs-container .tab.active::after {
   section.projects .tabs-container .tab.active::after {
     width: 20px;
     height: 20px;
-    bottom: -22px;
+    bottom: -26px;
     z-index: 1;
   }
 }

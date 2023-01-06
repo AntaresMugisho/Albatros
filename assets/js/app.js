@@ -4,7 +4,7 @@
 // | Auto update footer years       |
 // +--------------------------------+
 
-let start_year = 2022
+let start_year = 2023
 let years_label = document.querySelector(".years")
 let year = (new Date).getFullYear()
 
@@ -26,7 +26,6 @@ else{
 
 // Humburger menu toggle on mobile
 const humburger = document.querySelector(".humburger")
-
 
 humburger.addEventListener("click", toggle_menu)
 
@@ -50,14 +49,19 @@ for (const nav_link of nav_links){
 
 let contact_btns = document.querySelectorAll(".contact-btn")
 let popup = document.querySelector(".popup")
+let modal_wrapper = document.querySelector(".modal-wrapper")
+
 
 for (let contact_btn of contact_btns){
     contact_btn.addEventListener("click", () =>{
-        console.log("Hey")
         popup.classList.toggle("popup-show")
+
+        // Auto hide popup
+        setTimeout(()=>{
+            popup.classList.remove("popup-show")  
+        }, 5000)
     })
 }
-
 
 // +--------------------------------+
 // | Update active navlink onscroll |
