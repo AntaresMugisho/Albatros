@@ -35,11 +35,12 @@ section{
 
     .description{
         text-align: center;
-        font-size: fontSize(normal);
+        font-size: fontSize(level_5);
         width:80%;
 
         @include breakpoint(mobile){
             width:100%;
+            font-size: fontSize(normal);
         }
     }
 }

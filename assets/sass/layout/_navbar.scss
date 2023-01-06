@@ -43,13 +43,14 @@
         @include flex_center;
         list-style-type: none;
         gap:10px;
-        font-size: fontSize(normal);
+        font-size: fontSize(level_5);
 
         @include breakpoint(tablet){
             @include flex_start(column);
             background-color: $primary_color;
             width: 60%;
             height:98vh;
+            font-size: fontSize(normal);
             gap:0;
             position:absolute;
             top:46px;

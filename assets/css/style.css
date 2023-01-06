@@ -136,7 +136,7 @@ p, a {
   align-items: center;
   list-style-type: none;
   gap: 10px;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 @media screen and (max-width: 768px) {
   .navbar .nav-menu {
@@ -147,6 +147,7 @@ p, a {
     background-color: #0b5672;
     width: 60%;
     height: 98vh;
+    font-size: 1.6rem;
     gap: 0;
     position: absolute;
     top: 46px;
@@ -366,12 +367,13 @@ section .main-title::after {
 }
 section .description {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   width: 80%;
 }
 @media screen and (max-width: 480px) {
   section .description {
     width: 100%;
+    font-size: 1.6rem;
   }
 }
 
@@ -499,8 +501,8 @@ footer .social .social-links a i.facebook {
 footer .social .social-links a i.instagram {
   color: #ee2a7b;
 }
-footer .social .social-links a i.youtube {
-  color: #ff0000;
+footer .social .social-links a i.telegram {
+  color: #0076c0;
 }
 footer .social .social-links a i.twitter {
   color: #1DA1F2;
