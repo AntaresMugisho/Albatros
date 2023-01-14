@@ -548,7 +548,7 @@ section.projects{
 
             &:hover{
                 transform: scale(1.05);
-                // object-fit: scale-down;  // Don't know how to make a transition on this property
+                object-fit: scale-down;  // Don't know how to make a transition on this property
             }
         }
     }

@@ -1010,6 +1010,7 @@ section.projects .gallery img {
 }
 section.projects .gallery img:hover {
   transform: scale(1.05);
+  object-fit: scale-down;
 }
 
 .obs {
