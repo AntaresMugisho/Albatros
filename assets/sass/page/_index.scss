@@ -166,7 +166,12 @@ section.who-am-i{
 // --------------------------------
 
 section.contacts{
-    background-color: #f0f0f0;
+    background-image: linear-gradient(90deg, #f0f0f0 50%, lighten($secondary_color, 38) 50%);
+
+    @include breakpoint(mobile){
+        background-image: unset;
+        background-color: #f0f0f0;
+    }
 
     .left-side, .right-side{
         
@@ -194,7 +199,9 @@ section.contacts{
     }
 
     .right-side{
-        background-color: lighten($color: $secondary_color, $amount: 38);
+        @include breakpoint(mobile){
+            background-color: lighten($color: $secondary_color, $amount: 38);
+        }
     
         .contacts-list{
             position:relative;

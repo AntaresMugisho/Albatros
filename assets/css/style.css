@@ -663,7 +663,13 @@ section.who-am-i .right-side img {
 }
 
 section.contacts {
-  background-color: #f0f0f0;
+  background-image: linear-gradient(90deg, #f0f0f0 50%, #eff9fc 50%);
+}
+@media screen and (max-width: 480px) {
+  section.contacts {
+    background-image: unset;
+    background-color: #f0f0f0;
+  }
 }
 @media screen and (max-width: 480px) {
   section.contacts .left-side, section.contacts .right-side {
@@ -681,8 +687,10 @@ section.contacts .left-side p span:first-child {
 section.contacts .left-side p span:not(:first-child) {
   font-weight: 300;
 }
-section.contacts .right-side {
-  background-color: #eff9fc;
+@media screen and (max-width: 480px) {
+  section.contacts .right-side {
+    background-color: #eff9fc;
+  }
 }
 section.contacts .right-side .contacts-list {
   position: relative;
