@@ -4,6 +4,7 @@ section{
     @include flex_center(column);
     gap:40px;
     padding:60px 10%;
+    min-height:100vh;
 
     @include breakpoint(mobile){
         padding:30px 5%;
@@ -77,6 +78,7 @@ section.container{
     .left-side, .right-side{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap:20px;
         width: 50%;
         height: 100%;

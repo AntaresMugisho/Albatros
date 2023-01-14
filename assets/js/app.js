@@ -99,9 +99,6 @@ function handleIntersect(entries, observer){
             if (entry.isIntersecting){
                 entry.target.classList.remove("obs--hide")
             }
-            else{
-                entry.target.classList.add("obs--hide")
-            }
         }
 
         // Manage sections intersecting
