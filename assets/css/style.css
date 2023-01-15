@@ -1004,10 +1004,11 @@ section.projects .gallery {
   }
 }
 section.projects .gallery li {
-  flex-grow: 1;
+  width: 250px;
   height: 250px;
   background-color: rgb(255, 255, 255);
-  transition: all 1s 0.3s;
+  border: 4px solid #f1f1f1;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.4);
 }
 section.projects .gallery li.web, section.projects .gallery li.ui {
   display: none;
@@ -1016,6 +1017,7 @@ section.projects .gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: 1px solid rgba(51, 51, 51, 0.186);
   transition: transform 0.3s;
 }
 section.projects .gallery img:hover {
