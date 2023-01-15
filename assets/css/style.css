@@ -514,10 +514,10 @@ div.banner {
   padding: 56px 0 0 10%;
   height: 100vh;
   background-color: rgba(173, 216, 230, 0.3);
-  background-image: url(../../images/banner.JPG);
+  background-image: url(../../images/banner.webp);
   background-repeat: no-repeat;
-  background-position: -10em 0;
-  background-size: auto 100%;
+  background-position: center;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -526,6 +526,7 @@ div.banner {
   div.banner {
     padding-left: 0;
     justify-content: flex-start;
+    background-position: -60px 0;
   }
 }
 
@@ -538,7 +539,8 @@ div.banner {
   width: 60%;
   height: 100%;
   padding: 0 10%;
-  background-color: rgb(173, 216, 230);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 @media screen and (max-width: 480px) {
   .banner-content {
