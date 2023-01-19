@@ -4,7 +4,7 @@ section{
     @include flex_center(column);
     gap:40px;
     padding:60px 10%;
-    height:100vh;
+    min-height:100vh;
 
     @include breakpoint(mobile){
         padding:30px 5%;
