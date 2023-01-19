@@ -131,18 +131,22 @@ div.banner{
     padding:12px;
     position:fixed;
     right:30px;
-    bottom:80px;
+    bottom:110px;
     transition: background-color .2s;
     opacity: 0;
     visibility: hidden;
     transition: opacity .3s ease-in,
-                visibility 0s 1s;
+                visibility 0s .4s;
     z-index:100;
+
+    @include breakpoint(mobile){
+        bottom:80px;
+    }
 
     &-show{
         visibility: visible;
         opacity: 1;
-        transition: opacity .3s ease-out    ;
+        transition: opacity .3s ease-out;
     }
 
     a{
