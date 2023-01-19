@@ -593,7 +593,7 @@ div.banner::after {
   border-radius: 25px;
   position: fixed;
   right: 30px;
-  bottom: 30px;
+  bottom: 60px;
   transition: background-color 0.2s;
 }
 .quick-contact:hover {
@@ -610,6 +610,7 @@ div.banner::after {
     align-items: center;
     width: 40px;
     height: 40px;
+    bottom: 30px;
   }
   .quick-contact span {
     display: none;
@@ -625,14 +626,15 @@ div.banner::after {
   right: 30px;
   bottom: 80px;
   transition: background-color 0.2s;
-  transform: scale(0);
+  opacity: 0;
   visibility: hidden;
+  transition: opacity 0.3s ease-in, visibility 0s 1s;
   z-index: 100;
 }
 .popup-show {
   visibility: visible;
-  transform: scale(1);
-  transition: scale 0.2s;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
 }
 .popup a {
   display: flex;
@@ -1014,6 +1016,12 @@ section.projects .gallery li {
   background-color: rgb(255, 255, 255);
   border: 8px solid #ffffff;
   box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.4);
+}
+@media screen and (max-width: 480px) {
+  section.projects .gallery li {
+    width: 100%;
+    height: max-content;
+  }
 }
 section.projects .gallery li.web, section.projects .gallery li.ui {
   display: none;

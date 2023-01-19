@@ -101,7 +101,7 @@ div.banner{
     border-radius: 25px;
     position:fixed;
     right:30px;
-    bottom:30px;
+    bottom:60px;
     transition: background-color .2s;
 
     &:hover{
@@ -116,6 +116,7 @@ div.banner{
         @include flex_center;
         width:40px;
         height:40px;
+        bottom:30px;
 
         span{
             display:none;
@@ -132,14 +133,16 @@ div.banner{
     right:30px;
     bottom:80px;
     transition: background-color .2s;
-    transform: scale(0);
+    opacity: 0;
     visibility: hidden;
+    transition: opacity .3s ease-in,
+                visibility 0s 1s;
     z-index:100;
 
     &-show{
         visibility: visible;
-        transform: scale(1);
-        transition: scale .2s;
+        opacity: 1;
+        transition: opacity .3s ease-out    ;
     }
 
     a{
@@ -562,6 +565,11 @@ section.projects{
             //transition: all 1s .3s ease-out;
             border:8px solid #ffffff;
             box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.4);
+
+            @include breakpoint(mobile){
+                width: 100%;
+                height:max-content;
+            }
         }
 
         li.web, li.ui{
