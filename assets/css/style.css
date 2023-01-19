@@ -336,6 +336,7 @@ section {
   align-items: center;
   gap: 40px;
   padding: 60px 10%;
+  height: 100vh;
 }
 @media screen and (max-width: 480px) {
   section {
@@ -410,6 +411,7 @@ section.container .right-side {
 section.container .left-side, section.container .right-side {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 20px;
   width: 50%;
   height: 100%;
@@ -510,12 +512,12 @@ footer .social .social-links a i.twitter {
 
 div.banner {
   padding: 56px 0 0 10%;
-  height: 80vh;
+  height: 100vh;
   background-color: rgba(173, 216, 230, 0.3);
   background-image: url(../../images/banner.JPG);
   background-repeat: no-repeat;
   background-position: -10em 0;
-  background-size: auto 80vh;
+  background-size: auto 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -736,6 +738,7 @@ section.contacts .right-side .contacts-list-icons-container i {
 section.utils {
   padding-left: 0;
   padding-right: 0;
+  padding-bottom: 0;
 }
 section.utils .description {
   padding: 0 10%;
@@ -755,6 +758,7 @@ section.utils .utils-container {
   background-color: #f0f0f0;
   padding: 40px 10%;
   width: 100%;
+  height: 100%;
 }
 @media screen and (max-width: 480px) {
   section.utils .utils-container {
