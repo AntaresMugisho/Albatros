@@ -27,9 +27,8 @@ div.banner{
         position:absolute;
         top:0;
         bottom:0;
-
-        
     }
+
     @include breakpoint(mobile){
         padding-left:0;
         justify-content: flex-start;

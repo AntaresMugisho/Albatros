@@ -1,5 +1,9 @@
 
 
+main{
+    padding-top: 5rem;
+}
+
 section{
     @include flex_center(column);
     gap:40px;

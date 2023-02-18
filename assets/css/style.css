@@ -329,6 +329,10 @@ p, a {
   color: #000000;
 }
 
+main {
+  padding-top: 5rem;
+}
+
 section {
   display: flex;
   flex-direction: column;
