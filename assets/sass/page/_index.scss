@@ -568,6 +568,7 @@ section.projects{
             //transition: all 1s .3s ease-out;
             border:8px solid #ffffff;
             box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
 
             @include breakpoint(mobile){
                 width: 100%;
@@ -587,7 +588,7 @@ section.projects{
             transition: transform .3s;
 
             &:hover{
-                transform: scale(1.05);
+                transform: scale(1.2);
                 object-fit: scale-down;  // Don't know how to make a transition on this property
             }
         }

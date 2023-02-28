@@ -1025,6 +1025,7 @@ section.projects .gallery li {
   background-color: rgb(255, 255, 255);
   border: 8px solid #ffffff;
   box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
 }
 @media screen and (max-width: 480px) {
   section.projects .gallery li {
@@ -1043,7 +1044,7 @@ section.projects .gallery img {
   transition: transform 0.3s;
 }
 section.projects .gallery img:hover {
-  transform: scale(2);
+  transform: scale(1.2);
   object-fit: scale-down;
 }
 
