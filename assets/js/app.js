@@ -24,6 +24,28 @@ else{
 // | Show/Hide navmenu on mobile    |
 // +--------------------------------+
 
+
+function toggleMenu(){
+    const navmenu = document.querySelector(".nav-menu")
+    navmenu.classList.toggle("nav-menu--show")
+    
+    const menuBars = document.querySelectorAll("span.bar")
+    menuBars[0].classList.toggle("rotate-[30deg]")
+    menuBars[1].classList.toggle("-rotate-45")
+    menuBars[2].classList.toggle("rotate-[30deg]")
+}
+
+const menuBtn = document.getElementById("menuBtn")
+menuBtn.addEventListener("click", toggleMenu)
+
+const navLinks = document.getElementsByClassName("nav-link")
+for (const navLink of navLinks) {
+  navLink.addEventListener("click", toggleMenu)
+}
+
+
+///////////////// OLD /////////////////
+
 // Humburger menu toggle on mobile
 const humburger = document.querySelector(".humburger")
 
@@ -36,11 +58,6 @@ function toggle_menu(){
     humburger.classList.toggle("bi-x")
 }
 
-// Hide navmenu when clicking on a link of navmenu
-const nav_links = document.getElementsByClassName("nav-link")
-for (const nav_link of nav_links){
-    nav_link.addEventListener("click", toggle_menu)
-}
 
 
 // +--------------------------------+
@@ -104,10 +121,10 @@ function handleIntersect(entries, observer){
         // Manage sections intersecting
         if (entry.target.attributes["id"] !== undefined){
             if (entry.isIntersecting){
-                for (const nav_link of nav_links){
-                    nav_link.classList.remove("active")
-                    if (entry.target.attributes["id"].value === nav_link.hash.replace("#", "")){
-                        nav_link.classList.add("active")
+                for (const navLink of navLinks){
+                    navLink.classList.remove("active")
+                    if (entry.target.attributes["id"].value === navLink.hash.replace("#", "")){
+                        navLink.classList.add("active")
                     }
                 }
             }
